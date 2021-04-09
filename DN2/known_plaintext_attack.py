@@ -9,9 +9,6 @@ poly = (
 
 key_length = tuple(len(p) - 1 for p in poly)
 
-# p1 = [1, 0, 1, 0, 0, 1]
-# p2 = [1, 1, 0, 0, 0, 0, 0, 1]
-# p3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1]
 
 def index_of_coincidence(text1,text2):
     assert len(text1) == len(text2)
@@ -68,6 +65,8 @@ known_plaintext = to_binary('CRYPTOGRAPHY')
 ciphertext = sys.stdin.read()
 
 key = known_plaintext_attack(known_plaintext, ciphertext[:len(known_plaintext)])
+
+print(key)
 
 # plaintext = '000101000111000011111001101110001101000100000011110011111000'
 # ciphertext = '011001110111111110011000111110101010111001111011000111111001'

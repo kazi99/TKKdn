@@ -5,6 +5,9 @@ to_num = {l : i for (l,i) in zip(list(alphabet),range(N))}
 to_char = alphabet
 
 def to_binary(plain_text):
+    """ Plaintext prevede v dvojiško zaporedje, kjer je vsaka črka predstavljena s 5 biti. Primer:
+    
+    D -> 3 -> 00011 """
     binary = ''
     for c in plain_text:
         binary += '{0:05b}'.format(to_num[c])
@@ -19,15 +22,17 @@ def to_plain_text(binary):
 
 def lfsr(poly, key):
     """ poly ... seznam koeficientov polinoma \n
-    key ... ključ 
+        key ... ključ 
     
-    Oba morata biti iste dolžine
+        ! Stopnja polinoma je enaka dolžini ključa !
 
-    list c = [c_0, c_1, ... , c_m] <-> polinom c_0 + c_1X + ... + c_mX^m
+        list c = [c_0, c_1, ... , c_m] <-> polinom c_0 + c_1X + ... + c_mX^m
 
-    lfsr vrne generator, ki generira bite glede na karakteristični polinom predstavljen s seznamom poly:
+        lfsr vrne generator, ki generira bite glede na karakteristični polinom predstavljen s seznamom poly:
     
         z_i = c[1]z[i - 1] + c[2]z[i - 2] + ... + c[m]z[i - m] (mod 2)
+
+        Prvih nekaj bitov predstavlja samo ključ.
     """
 
     m = len(key)
@@ -73,4 +78,3 @@ def encrypt(b, key, poly):
 def decrypt(c, key, poly):
     # ker je +1 = -1 (mod 2) lahko uporabimo isto funkcijo
     return encrypt(c, key, poly)
-
