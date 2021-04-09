@@ -48,6 +48,6 @@ python3 known_plaintext_attack.py < ciphertext.txt
 ```
 Sicer pa je potrebno zgolj zamenjati trojico poznanih karakterističnih polinomov v  `poly` in prirediti poznani del beselia v `known_plaintext`.  
 
-- - - -
+---
 
 Domača naloga je dostopna tudi na mojem git-u na povezavi <https://github.com/kazi99/TKKdn>
