@@ -1,4 +1,5 @@
-# Large Prime Generation for RSA
+# Ta skripta je prirejena po https://www.geeksforgeeks.org/how-to-generate-large-prime-numbers-for-rsa-algorithm/ [ogled 10.5.2021 18:30]
+
 import random
 
 # Pre generated primes
@@ -16,14 +17,12 @@ def nBitRandom(n):
     return random.randrange(2**(n-1)+1, 2**n - 1)
 
 def getLowLevelPrime(n):
-    '''Generate a prime candidate divisible
-    by first primes'''
+    '''Generate a prime candidate divisible by first primes'''
     while True:
         # Obtain a random number
         pc = nBitRandom(n)
 
-        # Test divisibility by pre-generated
-        # primes
+        # Test divisibility by pre-generated primes
         for divisor in first_primes_list:
             if pc % divisor == 0 and divisor**2 <= pc:
                 break
@@ -46,7 +45,6 @@ def isMillerRabinPassed(mrc, numberOfRabinTrials=20):
                 return False
         return True
 
-    # Set number of trials here
     for i in range(numberOfRabinTrials):
         round_tester = random.randrange(2, mrc)
         if trialComposite(round_tester):
@@ -80,6 +78,6 @@ def euclid(a, n):
         t, t_prev = t_prev - q * t, t
     return r_prev, s_prev, t_prev
 
-
+# To sta z veliko gotovostjo 160-bitni oz. 1024-bitni praštevili, za kateri velja q | p - 1 
 qq = 1162255769745614450053660730222188860003339885989
 pp = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767
