@@ -43,35 +43,3 @@ def authenticate(msg, r,s, p,q,g,y):
     u1, u2 = (h*w % q), (r*w % q)
 
     return ((pow(g, u1, p) * pow(y, u2, p) % p) % q) == r
-
-
-# (p, q, g, y, x) = generate_key()
-# (r, s) = sign('x', p, q, g, x)
-# print(authenticate('x', r,s, p,q,g,y))
-
-
-# def sign(x, p, q, alpha, a):
-#     assert isinstance(x, str)
-
-#     k = random.randint(1, q - 1)
-#     gamma = pow(alpha, k, p) % q
-#     h = int(sha1(x.encode('utf-8')).hexdigest(), 16)
-#     delta = (euclid(k, q)[1] * (h + a*gamma)) % q
-
-#     if gamma == 0 or delta == 0:
-#         sign(x, p, q, alpha, a)
-    
-#     return gamma, delta
-
-# def authenticate(x, signature, public_key):
-#     gamma, delta = signature
-#     (p, q, alpha, beta) = public_key
-#     w = euclid(delta, q)[1]
-#     h = int(sha1(x.encode('utf-8')).hexdigest(), 16)
-#     e1 = (h * w) % q
-#     e2 = (gamma * w) % q
-#     return (gamma % q) == ((pow(alpha, e1, p) * pow(beta, e2, p) % p) % q)
-
-# (p, q, g, y, x) = generate_key()
-# (r, s) = sign('x', p, q, g, x)
-# print(authenticate('x', (r,s), (p,q,g,y)))
