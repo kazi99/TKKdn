@@ -21,7 +21,7 @@ S to skripto si pomagamo poiskati veliki praštevili q in p, za kateri velja q |
 q = 1162255769745614450053660730222188860003339885989
 p = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767
 ```
-Večina te datoteke je prirejena po https://www.geeksforgeeks.org/how-to-generate-large-prime-numbers-for-rsa-algorithm/ [ogled 10.5.2021 18:30].
+Večina te datoteke je prirejena po skripti, ki jo nanjedmo na [povezavi](https://www.geeksforgeeks.org/how-to-generate-large-prime-numbers-for-rsa-algorithm/) [ogled 10.5.2021 18:30].
 
 - - - 
 
@@ -51,7 +51,7 @@ s katerim lahko podpišemo kvazi-trk `'3566083232 2314639948'` v par
 
 `block.py`
 
-Še zadnja datoteka nam pomaga ustvariti blok, ki ga lahko objavimo na spletni učilnici. Glede na vse do sedaj izračunane kvazi-trke, javne ključe in podpise dobimo veljaven (naslednji) blok.
+Še zadnja datoteka nam pomaga ustvariti blok, ki ga lahko objavimo na [spletni učilnici](https://ucilnica.fmf.uni-lj.si/mod/wiki/view.php?pageid=812&group=0). Glede na vse do sedaj izračunane kvazi-trke, javne ključe in podpise dobimo veljaven (naslednji) blok.
 
 ```
 3566083232 2314639948 1331457644987023306915329595383178299443741746176
