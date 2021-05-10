@@ -5,7 +5,7 @@ Rešitev naloge sestavljajo štiri datoteke `SHA1_quasi_collision.py`, `DSA.py`,
 - - -
 
 `SHA1_quasi_collision.py`
-V tej datoteki najdemo funkciji encrypt, ki s hash funkcijo SHA-1 zakodira dano besedilo, ter funkcijo find_quasi_collision, ki poišče kvazi-trke.Tako smo našli kvazi-trka:
+V tej datoteki najdemo funkciji `encrypt`, ki s hash funkcijo SHA-1 zakodira dano besedilo, ter funkcijo `find_quasi_collision`, ki poišče kvazi-trke. Tako smo našli kvazi-trka:
 
 ```
 3566083232 -> '1bd14ce970939d31173886ed13ee7befbc9e4d74'
@@ -14,12 +14,14 @@ V tej datoteki najdemo funkciji encrypt, ki s hash funkcijo SHA-1 zakodira dano 
 - - -
 
 `largePrimes.py`
+
 S to skripto si pomagamo poiskati veliki praštevili q in p, za kateri velja q | p - 1, kjer je q 160-bitno, p pa 1024-bitno praštevilo. Za preverjane praštevilskosti smo uporabili Miller-Rabinov test praštevilskosti. Tako smo dobili
 
 ```
 q = 1162255769745614450053660730222188860003339885989
 p = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767
 ```
+Večina te datoteke je prirejena po https://www.geeksforgeeks.org/how-to-generate-large-prime-numbers-for-rsa-algorithm/ [ogled 10.5.2021 18:30].
 
 - - - 
 
@@ -43,4 +45,22 @@ s katerim lahko podpišemo kvazi-trk `'3566083232 2314639948'` v par
 
 ```
 (ɣ, δ) = (885132376731180039524755523791404102539650001009, 186928447392509313699548708400401167439359544935)
-```.
+```
+
+- - -
+
+`block.py`
+
+Še zadnja datoteka nam pomaga ustvariti blok, ki ga lahko objavimo na spletni učilnici. Glede na vse do sedaj izračunane kvazi-trke, javne ključe in podpise dobimo veljaven (naslednji) blok.
+
+```
+3566083232 2314639948 1331457644987023306915329595383178299443741746176
+IzakJenko 1142577795190654443520389728578545917931944978949 233323764178989057792929024652847273416340521174
+000000052fe0fe02b97e0b725e1ca95b75ab8f13
+2782570156
+00000003a3d77fdc0f6e4492275acc8e08740f5e
+```
+
+---
+
+Domača naloga je dostopna tudi na mojem git-u na povezavi <https://github.com/kazi99/TKKdn>
