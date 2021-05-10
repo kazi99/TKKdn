@@ -62,6 +62,12 @@ def n_bit_prime(n):
             break
     return prime_candidate
 
+def prime_p(q):
+    """ Generira 1024-bitno praštevilo p, za katero velja q | p - 1. """
+    for t in range(2**864, 2**865):
+        if isMillerRabinPassed(t * q + 1, 50):
+            return t * q + 1
+
 def euclid(a, n):
     """ izvede Euclidov algoritem """
     r, r_prev = n, a
@@ -73,3 +79,7 @@ def euclid(a, n):
         s, s_prev = s_prev - q * s, s
         t, t_prev = t_prev - q * t, t
     return r_prev, s_prev, t_prev
+
+
+qq = 1162255769745614450053660730222188860003339885989
+pp = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767
