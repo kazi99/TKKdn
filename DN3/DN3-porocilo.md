@@ -1,6 +1,6 @@
 # Poročilo — 3. domača naloga
 
-Rešitev naloge sestavljajo štiri datoteke `SHA1_quasi_collision.py`, `DSA.py`, `largePrimes.py` in `block.py`. Spodaj opišem kako delujejo te štiri datoteke, na koncu vsakega odstavka pa podam primer veljavnih podatkov, ki jih omenjene datoteke generirajo.
+Rešitev naloge sestavljajo štiri glavne datoteke `SHA1_quasi_collision.py`, `DSA.py`, `largePrimes.py` in `block.py`. Spodaj opišem kako delujejo te štiri datoteke, na koncu vsakega odstavka pa podam primer veljavnih podatkov, ki jih omenjene datoteke generirajo.
 
 - - -
 ## 1.del
@@ -17,7 +17,6 @@ Vidimo da imamo ujemanje v prvih 11 znakih:
 - **1bd14ce9709**39d31173886ed13ee7befbc9e4d74
 - **1bd14ce9709**c0121b2b58fac281e10afff9b2f95.
 
-- - -
 
 ## 2. del
 `largePrimes.py`
@@ -29,8 +28,7 @@ q = 1162255769745614450053660730222188860003339885989
 p = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767
 ```
 Večina te datoteke je prirejena po skripti, ki jo nanjedmo na [povezavi](https://www.geeksforgeeks.org/how-to-generate-large-prime-numbers-for-rsa-algorithm/) [ogled 10.5.2021 18:30].
-
-- - - 
+ 
 
 ## 3. del
 `DSA.py`
@@ -55,12 +53,11 @@ s katerim lahko podpišemo kvazi-trk `'3566083232 2314639948'` v par
 (ɣ, δ) = (225566172244877609895172024413828634251990495042, 1139447446177213386930380424924444227091082537397)
 ```
 
-- - -
 
 ## 4. del
 `block.py`
 
-Še zadnja datoteka nam pomaga ustvariti blok, ki ga lahko objavimo na [spletni učilnici](https://ucilnica.fmf.uni-lj.si/mod/wiki/view.php?pageid=812&group=0). Glede na vse do sedaj izračunane kvazi-trke, javne ključe in podpise dobimo veljaven (naslednji) blok.
+Še zadnja datoteka nam pomaga ustvariti blok, ki ga lahko objavimo na [spletni učilnici](https://ucilnica.fmf.uni-lj.si/mod/wiki/view.php?pageid=812&group=0). Glede na do sedaj izračunan kvazi-trk, javni ključi in podpis dobimo veljaven (naslednji) blok.
 
 ```
 3566083232 2314639948 1331457644987023306915329595383178299443741746176
