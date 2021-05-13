@@ -6,7 +6,7 @@ Rešitev naloge sestavljajo štiri glavne datoteke `SHA1_quasi_collision.py`, `D
 ## 1.del
 `SHA1_quasi_collision.py`
 
-V tej datoteki najdemo funkciji `encrypt`, ki s hash funkcijo SHA-1 zakodira dano besedilo, ter funkcijo `find_quasi_collision`, ki poišče kvazi-trke. Tako smo našli kvazi-trka:
+V tej datoteki najdemo funkciji `encrypt`, ki s hash funkcijo SHA-1 zakodira dano besedilo, ter funkcijo `find_quasi_collision`, ki poišče kvazi-trke. Preko nje smo poiskali kvazi-trka:
 
 ```
 3566083232 -> '1bd14ce970939d31173886ed13ee7befbc9e4d74'
@@ -33,7 +33,7 @@ Večina te datoteke je prirejena po skripti, ki jo nanjedmo na [povezavi](https:
 ## 3. del
 `DSA.py`
 
-V tej datoteki imamo funkciji za opravljanje z digitalnim podpisom DSA. Funkcija `generate_key`generira javni in privatni ključ. Funkcija `sign`nam preko DSA standarda omogoča podpisati dano besedilo, funkcija `authenticate`pa nam omogoča preverjanje ali je podpis danega besedila res pravilen s pomočjo objavljenega javnega ključa. Tako dobimo na primer javni ključ
+V tej datoteki imamo funkciji za opravljanje z digitalnim podpisom DSA. Funkcija `generate_key`generira javni in zasebni ključ. Funkcija `sign`nam preko DSA standarda omogoča podpisati dano besedilo, funkcija `authenticate`pa nam omogoča preverjanje ali je podpis danega besedila res pravilen s pomočjo objavljenega javnega ključa. Tako dobimo na primer javni ključ
 
 ```
 p = 142961127436133355490138919563890348660854840976893213352964599239251544301337707783902342383086525288103655452924484721723793662485712143636442571460216320911039914868719609454147758510875050598705302510931641607766956115093646822742924491276245455898739266555549702781082840760937147638759773821954219429767

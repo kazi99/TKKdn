@@ -13,6 +13,7 @@ row_1 = '{} {} {}'.format(b1, b2, int(encrypt('{} {}'.format(b1, b2)), 16))
 row_2 = 'IzakJenko {} {}'.format(r, s)
 row_3 = zadnja_vrstica_prejsnjega_bloka
 
+print('BLOK','\n')
 print(row_1)
 print(row_2)
 print(row_3)
@@ -21,14 +22,15 @@ print(row_3)
 # [ bšs se lahko zakomentira, ustrezne vrednosti za row_4 in row_5 sta že izračunani spodaj ]
 # poiščemo tako četrto vrstico da bo sha-1 uporabljen na prvih štirih vrsticah vrnil hash vrednost, ki se začne s sedmimi ničlami.
 
-row_4 = str(nBitRandom(32))
-m = '{}\n{}\n{}\n{}'.format(row_1, row_2, row_3, row_4)
+# row_4 = str(nBitRandom(32))
+# m = '{}\n{}\n{}\n{}'.format(row_1, row_2, row_3, row_4)
 
-while encrypt(m)[:7] != '0000000':
-    row_4 = str(nBitRandom(32))
-    m = '{}\n{}\n{}\n{}'.format(row_1, row_2, row_3, row_4)
+# while encrypt(m)[:7] != '0000000':
+#     row_4 = str(nBitRandom(32))
+#     m = '{}\n{}\n{}\n{}'.format(row_1, row_2, row_3, row_4)
 
-row_5 = encrypt(m)
+# row_5 = encrypt(m)
+
 ###     konec      ###
 
 
