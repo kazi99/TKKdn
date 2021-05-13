@@ -1,6 +1,6 @@
 # Poročilo — 3. domača naloga
 
-Rešitev naloge sestavljajo štiri datoteke `SHA1_quasi_collision.py`, `DSA.py`, `largePrimes.py` in `block.py`.
+Rešitev naloge sestavljajo štiri datoteke `SHA1_quasi_collision.py`, `DSA.py`, `largePrimes.py` in `block.py`. Spodaj opišem kako delujejo te štiri datoteke, na koncu vsakega odstavka pa podam primer veljavnih podatkov, ki jih omenjene datoteke generirajo.
 
 - - -
 
@@ -11,6 +11,11 @@ V tej datoteki najdemo funkciji `encrypt`, ki s hash funkcijo SHA-1 zakodira dan
 3566083232 -> '1bd14ce970939d31173886ed13ee7befbc9e4d74'
 2314639948 -> '1bd14ce9709c0121b2b58fac281e10afff9b2f95'
 ```
+
+Vidimo da imamo ujemanje v prvih 11 znakih:
+- **1bd14ce9709**39d31173886ed13ee7befbc9e4d74
+- **1bd14ce9709**c0121b2b58fac281e10afff9b2f95.
+
 - - -
 
 `largePrimes.py`
